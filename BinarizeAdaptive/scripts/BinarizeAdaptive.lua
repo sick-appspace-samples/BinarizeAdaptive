@@ -26,7 +26,6 @@ print('AppEngine Version: ' .. Engine.getVersion())
 
 -- Create viewer
 local viewer = View.create()
-viewer:setID('viewer2D')
 
 --End of Global Scope-----------------------------------------------------------
 
