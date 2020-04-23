@@ -24,6 +24,8 @@
 
 print('AppEngine Version: ' .. Engine.getVersion())
 
+local DELAY = 1500 -- ms between each type for demonstration purpose
+
 -- Create viewer
 local viewer = View.create()
 
@@ -36,7 +38,7 @@ local function main()
   local img = Image.load('resources/BinarizeAdaptive.bmp')
   viewer:addImage(img)
   viewer:present()
-  Script.sleep(1500) -- for demonstration purpose only
+  Script.sleep(DELAY) -- for demonstration purpose only
 
   -- Binarizing adaptively with local threshold 7, kernel size 11 and without inversion
   local img2 = img:binarizeAdaptive(7, 11, false)
